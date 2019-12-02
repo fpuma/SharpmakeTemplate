@@ -1,0 +1,3 @@
+#extern folder
+#The purpose of this file is to submit the extern folder and save the repository's folder structure
+#Delete this file after adding extern source files to this folder.

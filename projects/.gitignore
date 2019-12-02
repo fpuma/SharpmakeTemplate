@@ -1,0 +1,5 @@
+#projects folder
+#The purpose of this file is to submit the projects folder and save the repository's folder structure.
+#This folder should remain empty and only be used by the output of sharpmake
+*
+!.gitignore
