@@ -1,0 +1,26 @@
+
+output/*
+projects/*
+
+###################################################
+#SHARPMAKE BEGIN
+#Ignore files related to the debug solution of sharpmake
+sharpmake/sharpmakeFiles/sharpmake_debug.vs2017.csproj
+sharpmake/sharpmakeFiles/sharpmake_debug.vs2017.csproj.user
+sharpmake/sharpmakeFiles/sharpmake_debugsolution.vs2017.sln
+sharpmake/sharpmakeFiles/obj/*
+sharpmake/sharpmakeFiles/output/*
+sharpmake/sharpmakeFiles/.vs/*
+
+#After submitting the sharpmake source code for the first time, ignore the folder
+sharpmake/Sharpmake-0.9.0/*
+
+#Make exception for the files in sharpmakeApplication
+!sharpmakeApplication/*
+#SHARPMAKE END
+##################################################
+
+#EXCEPTIONS
+!extern/*
+!output/empty
+!projects/empty

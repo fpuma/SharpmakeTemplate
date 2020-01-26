@@ -16,8 +16,12 @@ namespace Puma
 
         static public string GetOptimizationSuffix(Optimization _optimization)
         {
-            string optimizationSuffix =  Optimization.Debug == _optimization ? "_d" : "_r";
-            return optimizationSuffix;
+            return Optimization.Debug == _optimization ? "_d" : "_r";
+        }
+
+        static public string GetRepositoryPath()
+        {
+            return Directory.GetCurrentDirectory();
         }
     }
 }
