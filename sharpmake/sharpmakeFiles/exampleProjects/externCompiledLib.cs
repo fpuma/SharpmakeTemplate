@@ -11,7 +11,7 @@ namespace Example.Projects
     }
 
     [Sharpmake.Export]
-    public class ExportExCompiledLib : ExternCompiledLib
+    public class ExportExternCompiledLib : ExternCompiledLib
     {
 
     }

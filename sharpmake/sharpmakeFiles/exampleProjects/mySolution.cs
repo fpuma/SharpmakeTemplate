@@ -32,6 +32,7 @@ namespace Example.Solutions
             base.ConfigureAll(conf, target);
             conf.AddProject<Example.Projects.ExternApplication>(target);
             conf.AddProject<Example.Projects.ExternCompiledLib>(target);
+            conf.AddProject<Example.Projects.ExternCompiledDll>(target);
         }
     }
 }

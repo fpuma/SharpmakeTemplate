@@ -16,7 +16,8 @@ namespace Example.Projects
             base.ConfigureAll(conf, target);
             conf.AddPrivateDependency<ExampleLib>(target);
             conf.AddPrivateDependency<ExampleDll>(target);
-            conf.AddPrivateDependency<ExportExCompiledLib>(target);
+            conf.AddPrivateDependency<ExportExternCompiledLib>(target);
+            conf.AddPrivateDependency<ExportExternCompiledDll>(target);
         }
     }
 }

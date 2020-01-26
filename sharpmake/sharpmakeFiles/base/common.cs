@@ -126,8 +126,8 @@ namespace Puma.Common
     {
         public readonly string ExternFilesFolderName;
 
-        public readonly string ProjectGenerationPath = Puma.Utils.GetProjectsPath() + @"\extern\[project.Name]\";//@"[project.SharpmakeCsPath]\..\projects\extern\[project.Name]\";
-        public readonly string TargetOutputPath = Puma.Utils.GetOutputPath() + @"\extern\[project.Name]\bin\";
+        public readonly string ProjectGenerationPath = Puma.Utils.GetProjectsPath() + @"\extern\[project.Name]\";
+        public readonly string TargetOutputPath = Puma.Utils.GetOutputPath() + @"\extern\[project.Name]\";
 
         private ICompiledProject m_compiledProject = new ICompiledProject();
 
