@@ -1,4 +1,4 @@
-#include "libHeader.h"
+#include "compiledLib.h"
 #include "iostream"
 
 void LibClass::libMethod()

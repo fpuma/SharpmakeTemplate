@@ -1,6 +1,7 @@
 #include "iostream"
-#include "libHeader.h"
-#include "dllHeader.h"
+#include "compiledLib.h"
+#include "compiledDll.h"
+#include "externCompiledLib.h"
 
 int main(int argc, char *argv[])
 {
@@ -15,6 +16,9 @@ int main(int argc, char *argv[])
     MyClass myClass;
     myClass.exportedMethod();
    
+    ExternLibClass externLibClass;
+    externLibClass.libMethod();
+
     system( "pause" );
 
     return 0;

@@ -7,12 +7,13 @@ using Sharpmake;
 //Examples
 [module: Sharpmake.Include(@"exampleProjects\*")]
 
-class SharpmaleMainClass
+class SharpmakeMainClass
 {
     [Main]
     public static void SharpmakeMain(Arguments sharpmakeArgs)
     {
         sharpmakeArgs.Generate<Example.Solutions.ExampleSolution>();
+        sharpmakeArgs.Generate<Example.Solutions.ExternExampleSolution>();
     }
 }
 

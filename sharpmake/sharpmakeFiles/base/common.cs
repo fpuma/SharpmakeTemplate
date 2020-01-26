@@ -82,7 +82,6 @@ namespace Puma.Common
             conf.TargetPath = TargetOutputPath;
 
             conf.IncludePaths.Add(SourceRootPath);
-
         }
     }
 
@@ -150,6 +149,8 @@ namespace Puma.Common
 
             //Path were the binaries will be generated on compilation
             conf.TargetPath = TargetOutputPath;
+
+            conf.IncludePaths.Add(SourceRootPath);
         }
     }
 
