@@ -9,5 +9,12 @@ namespace Example.Projects
         public ExampleApplication()
             : base("ExampleApplication", "ExampleApplication")
         { }
+
+        [Sharpmake.Configure]
+        public override void ConfigureAll(Sharpmake.Project.Configuration conf, Sharpmake.Target target )
+        {
+            base.ConfigureAll(conf, target);
+            conf.AddPrivateDependency<ExampleLib>(target);
+        }
     }
 }
