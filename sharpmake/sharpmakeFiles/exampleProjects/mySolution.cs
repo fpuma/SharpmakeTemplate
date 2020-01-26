@@ -15,7 +15,7 @@ namespace Example.Solutions
         {
             base.ConfigureAll(conf, target);
 
-            conf.AddProject<Example.Projects.ExampleApplication>(target);
+            conf.AddProject<Example.Projects.MyApplication>(target);
         }
     }
 
@@ -31,8 +31,8 @@ namespace Example.Solutions
         {
             base.ConfigureAll(conf, target);
             conf.AddProject<Example.Projects.ExternApplication>(target);
-            conf.AddProject<Example.Projects.ExternCompiledLib>(target);
-            conf.AddProject<Example.Projects.ExternCompiledDll>(target);
+            conf.AddProject<Example.Projects.ExternLib>(target);
+            conf.AddProject<Example.Projects.ExternDll>(target);
         }
     }
 }

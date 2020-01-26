@@ -122,7 +122,7 @@ namespace Puma.Common
     //******************************************************************************************
 
     [Sharpmake.Generate]
-    public abstract class IExternCompiledApplication : Sharpmake.Project
+    public abstract class IExternApplication : Sharpmake.Project
     {
         public readonly string ExternFilesFolderName;
 
@@ -131,7 +131,7 @@ namespace Puma.Common
 
         private ICompiledProject m_compiledProject = new ICompiledProject();
 
-        public IExternCompiledApplication(string _projectName, string _externFolder)
+        public IExternApplication(string _projectName, string _externFolder)
         {
             Name = _projectName;
             ExternFilesFolderName = _externFolder;
@@ -155,9 +155,9 @@ namespace Puma.Common
     }
 
     [Sharpmake.Generate]
-    public abstract class IExternCompiledLib : IExternCompiledApplication
+    public abstract class IExternLib : IExternApplication
     {
-        public IExternCompiledLib(string _projectName, string _externFolder)
+        public IExternLib(string _projectName, string _externFolder)
             : base(_projectName, _externFolder)
         {}
 
@@ -170,9 +170,9 @@ namespace Puma.Common
     }
 
     [Sharpmake.Generate]
-    public abstract class IExternCompiledDll : IExternCompiledApplication
+    public abstract class IExternDll : IExternApplication
     {
-        public IExternCompiledDll(string _projectName, string _externFolder)
+        public IExternDll(string _projectName, string _externFolder)
             : base(_projectName, _externFolder)
         {}
 
@@ -185,11 +185,11 @@ namespace Puma.Common
     }
 
     [Sharpmake.Export]
-    abstract public class IExternBinaryLibrary : Sharpmake.Project
+    abstract public class IExternBinaries : Sharpmake.Project
     {
         public readonly string ExternFilesFolderName;
 
-        public IExternBinaryLibrary(string _projectName, string _externFolder)
+        public IExternBinaries(string _projectName, string _externFolder)
         {
             Name = _projectName;
             ExternFilesFolderName = _externFolder;
