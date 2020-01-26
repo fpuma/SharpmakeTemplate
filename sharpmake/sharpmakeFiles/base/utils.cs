@@ -21,7 +21,7 @@ namespace Puma
 
         static public string GetRepositoryPath()
         {
-            return Directory.GetCurrentDirectory();
+            return Directory.GetCurrentDirectory()+ @"\..\";
         }
     }
 }
