@@ -6,7 +6,7 @@
 #include "externLib.h"
 #include "externDll.h"
 
-#include "externPreCompiledDll.h"
+#include "precompiledDll.h"
 
 using namespace Examples;
 
@@ -35,10 +35,10 @@ int main(int argc, char *argv[])
     externDllNonExportedObj.exportedMethod();
 
     //Extern precompiled Dll
-    PreCompExportedClass preCompDll;
-    preCompDll.exportedClassMethod();
-    MyPreCompExternClass preCompClassDll;
-    preCompClassDll.exportedMethod();
+    Extern::PrecompiledBinaries::ExternExportedClass preCompBinariesObj;
+    preCompBinariesObj.someMethod();
+    Extern::PrecompiledBinaries::ExternClass preCompBinariesNonExportedObj;
+    preCompBinariesNonExportedObj.exportedMethod();
 
     system( "pause" );
 

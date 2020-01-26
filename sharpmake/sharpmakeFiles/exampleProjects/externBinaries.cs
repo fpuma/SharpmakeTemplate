@@ -21,13 +21,13 @@ namespace Example.Projects
 
             if(Sharpmake.Optimization.Debug ==  target.Optimization)
             {
-                conf.LibraryFiles.Add(@"externprecompileddll_d.lib");
-                conf.TargetCopyFiles.Add(SourceRootPath + @"\lib\externprecompileddll_d.dll");
+                conf.LibraryFiles.Add(@"precompileddll_d.lib");
+                conf.TargetCopyFiles.Add(SourceRootPath + @"\lib\precompileddll_d.dll");
             }
             else if (Sharpmake.Optimization.Release == target.Optimization)
             {
-                conf.LibraryFiles.Add(@"externprecompileddll_r.lib");
-                conf.TargetCopyFiles.Add(SourceRootPath + @"\lib\externprecompileddll_r.dll");
+                conf.LibraryFiles.Add(@"precompileddll_r.lib");
+                conf.TargetCopyFiles.Add(SourceRootPath + @"\lib\precompileddll_r.dll");
             }
 
         }
