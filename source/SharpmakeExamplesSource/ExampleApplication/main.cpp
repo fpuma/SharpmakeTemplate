@@ -1,5 +1,6 @@
 #include "iostream"
 #include "libHeader.h"
+#include "dllHeader.h"
 
 int main(int argc, char *argv[])
 {
@@ -7,6 +8,14 @@ int main(int argc, char *argv[])
 
     LibClass libClass;
     libClass.libMethod();
+
+    ExportedClass exportedClass;
+    exportedClass.exportedClassMethod();
+
+    MyClass myClass;
+    myClass.exportedMethod();
+   
+    system( "pause" );
 
     return 0;
 }
