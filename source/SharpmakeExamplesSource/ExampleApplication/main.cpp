@@ -3,6 +3,7 @@
 #include "compiledDll.h"
 #include "externCompiledLib.h"
 #include "externCompiledDll.h"
+#include "externPreCompiledDll.h"
 
 int main(int argc, char *argv[])
 {
@@ -27,6 +28,12 @@ int main(int argc, char *argv[])
     externExportedClass.exportedClassMethod();
     MyExternClass myExternClass;
     myExternClass.exportedMethod();
+
+    //Extern precompiled Dll
+    PreCompExportedClass preCompDll;
+    preCompDll.exportedClassMethod();
+    MyPreCompExternClass preCompClassDll;
+    preCompClassDll.exportedMethod();
 
     system( "pause" );
 

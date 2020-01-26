@@ -18,6 +18,7 @@ namespace Example.Projects
             conf.AddPrivateDependency<ExampleDll>(target);
             conf.AddPrivateDependency<ExportExternCompiledLib>(target);
             conf.AddPrivateDependency<ExportExternCompiledDll>(target);
+            conf.AddPrivateDependency<ExternPreCompiledDll>(target);
         }
     }
 }
