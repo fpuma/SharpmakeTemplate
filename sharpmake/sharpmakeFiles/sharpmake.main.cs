@@ -3,9 +3,9 @@ using Sharpmake;
 
 
 [module: Sharpmake.Include(@"base\*")]
-[module: Sharpmake.Include(@"exampleProjects\*")]
-[module: Sharpmake.Include(@"exampleSolutions\*")]
 
+//Examples
+[module: Sharpmake.Include(@"exampleProjects\*")]
 
 class SharpmaleMainClass
 {

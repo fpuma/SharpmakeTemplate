@@ -23,5 +23,25 @@ namespace Puma
         {
             return Directory.GetCurrentDirectory()+ @"\..\";
         }
+
+        static public string GetProjectsPath()
+        {
+            return GetRepositoryPath() + @"\_projects\";
+        }
+
+        static public string GetOutputPath()
+        {
+            return GetRepositoryPath() + @"\_output\";
+        }
+
+        static public string GetSourcePath()
+        {
+            return GetRepositoryPath() + @"\source\";
+        }
+
+        static public string GetExternPath()
+        {
+            return GetRepositoryPath() + @"\extern\";
+        }
     }
 }

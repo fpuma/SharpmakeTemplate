@@ -23,7 +23,7 @@ internal class ICompiledProject
         conf.Options.Add(disableSpecificWarnings);
 
         conf.VcxprojUserFile = new Sharpmake.Project.Configuration.VcxprojUserFileSettings();
-        conf.VcxprojUserFile.LocalDebuggerWorkingDirectory = Puma.Utils.GetRepositoryPath() + @"\output\";
+        conf.VcxprojUserFile.LocalDebuggerWorkingDirectory = Puma.Utils.GetOutputPath();
     }
 }
 
@@ -45,7 +45,7 @@ namespace Puma.Common
         [Sharpmake.Configure]
         public virtual void ConfigureAll(Configuration conf, Sharpmake.Target target)
         {
-            conf.SolutionPath = Puma.Utils.GetRepositoryPath() + @"\projects";
+            conf.SolutionPath = Puma.Utils.GetProjectsPath();
         }
     }
 
@@ -57,8 +57,8 @@ namespace Puma.Common
     {
         public string SourceFilesFolderName;
 
-        public readonly string ProjectGenerationPath = Puma.Utils.GetRepositoryPath() + @"\projects\[project.Name]\"; //@"[project.SharpmakeCsPath]\..\projects\[project.Name]\";
-        public readonly string TargetOutputPath    = Puma.Utils.GetRepositoryPath() + @"\output\";
+        public readonly string ProjectGenerationPath = Puma.Utils.GetProjectsPath() + @"\[project.Name]\";
+        public readonly string TargetOutputPath    = Puma.Utils.GetOutputPath();
 
         private ICompiledProject m_compiledProject = new ICompiledProject();
 
@@ -66,7 +66,7 @@ namespace Puma.Common
         {
             Name = _projectName;
             SourceFilesFolderName = _sourceFolder;
-            SourceRootPath = Puma.Utils.GetRepositoryPath() + @"\source\[project.SourceFilesFolderName]\"; //@"[project.SharpmakeCsPath]\..\source\[project.SourceFilesFolderName]\";
+            SourceRootPath = Puma.Utils.GetSourcePath() + @"\[project.SourceFilesFolderName]\";
             AddTargets(Puma.Utils.GetDefaultTarget());
         }
 
@@ -127,8 +127,8 @@ namespace Puma.Common
     {
         public readonly string ExternFilesFolderName;
 
-        public readonly string ProjectGenerationPath = Puma.Utils.GetRepositoryPath() + @"\projects\extern\[project.Name]\";//@"[project.SharpmakeCsPath]\..\projects\extern\[project.Name]\";
-        public readonly string TargetOutputPath = Puma.Utils.GetRepositoryPath() + @"\output\extern\[project.Name]\bin\";
+        public readonly string ProjectGenerationPath = Puma.Utils.GetProjectsPath() + @"\extern\[project.Name]\";//@"[project.SharpmakeCsPath]\..\projects\extern\[project.Name]\";
+        public readonly string TargetOutputPath = Puma.Utils.GetOutputPath() + @"\extern\[project.Name]\bin\";
 
         private ICompiledProject m_compiledProject = new ICompiledProject();
 
@@ -136,7 +136,7 @@ namespace Puma.Common
         {
             Name = _projectName;
             ExternFilesFolderName = _externFolder;
-            SourceRootPath = Puma.Utils.GetRepositoryPath() + @"\extern\[project.ExternFilesFolderName]\";
+            SourceRootPath = Puma.Utils.GetExternPath() + @"\[project.ExternFilesFolderName]\";
             AddTargets(Puma.Utils.GetDefaultTarget());
         }
 
@@ -192,7 +192,7 @@ namespace Puma.Common
         {
             Name = _projectName;
             ExternFilesFolderName = _externFolder;
-            SourceRootPath = Puma.Utils.GetRepositoryPath() + @"\extern\[project.ExternFilesFolderName]\";
+            SourceRootPath = Puma.Utils.GetExternPath() + @"\[project.ExternFilesFolderName]\";
             AddTargets(Puma.Utils.GetDefaultTarget());
         }
 

@@ -7,7 +7,7 @@ namespace Example.Projects
     class ExampleApplication : Puma.Common.IMyApplication
     {
         public ExampleApplication()
-            : base("ExampleApplication", "ExampleApplication")
+            : base("ExampleApplication", @"SharpmakeExamplesSource\ExampleApplication")
         { }
 
         [Sharpmake.Configure]

@@ -6,7 +6,7 @@ namespace Example.Projects
     public class ExampleLib : Puma.Common.IMyLib
     {
         public ExampleLib()
-        : base("ExampleLib", "ExampleLib")
+        : base("ExampleLib", @"SharpmakeExamplesSource\ExampleLib")
         {}
     }
 }

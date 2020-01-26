@@ -1,6 +1,6 @@
 
-output/*
-projects/*
+_output/*
+_projects/*
 
 ###################################################
 #SHARPMAKE BEGIN
