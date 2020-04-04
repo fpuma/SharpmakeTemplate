@@ -1,4 +1,5 @@
 using System.IO;
+using System.Reflection;
 using Sharpmake;
 
 namespace Puma
@@ -21,7 +22,7 @@ namespace Puma
 
         static public string GetRepositoryPath()
         {
-            return Directory.GetCurrentDirectory()+ @"\..\";
+            return Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) + @"\..\..\";
         }
 
         static public string GetProjectsPath()
