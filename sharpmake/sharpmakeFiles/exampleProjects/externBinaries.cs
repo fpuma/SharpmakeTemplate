@@ -12,7 +12,7 @@ namespace Example.Projects
 
         public override void ConfigureIncludes(Configuration conf, Target target)
         {
-            conf.IncludePaths.Add(SourceRootPath + @"\include\");
+            conf.IncludePaths.Add(@"\include\");
         }
 
         public override void ConfigureLink(Configuration conf, Target target)

@@ -8,6 +8,12 @@ namespace Example.Projects
         public ExternLib()
             : base("ExternLib", @"SharpmakeExternExampleSource\ExternLib")
         { }
+
+        public override void ConfigureAll(Configuration conf, Sharpmake.Target target)
+        {
+            base.ConfigureAll(conf, target);
+            conf.IncludePaths.Add(@"");
+        }
     }
 
     namespace Export

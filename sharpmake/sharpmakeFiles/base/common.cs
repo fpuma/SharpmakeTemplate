@@ -57,7 +57,7 @@ namespace Puma.Common
     {
         public string SourceFilesFolderName;
 
-        public readonly string ProjectGenerationPath = Puma.Utils.GetProjectsPath() + @"\[project.Name]\";
+        public readonly string ProjectGenerationPath = Puma.Utils.GetProjectsPath() + @"\[project.Name]";
         public readonly string TargetOutputPath    = Puma.Utils.GetOutputPath();
 
         private ICompiledProject m_compiledProject = new ICompiledProject();
@@ -66,7 +66,7 @@ namespace Puma.Common
         {
             Name = _projectName;
             SourceFilesFolderName = _sourceFolder;
-            SourceRootPath = Puma.Utils.GetSourcePath() + @"\[project.SourceFilesFolderName]\";
+            SourceRootPath = Puma.Utils.GetSourcePath() + @"\[project.SourceFilesFolderName]";
             AddTargets(Puma.Utils.GetDefaultTarget());
         }
 
@@ -80,8 +80,6 @@ namespace Puma.Common
 
             //Path were the binaries will be generated on compilation
             conf.TargetPath = TargetOutputPath;
-
-            conf.IncludePaths.Add(SourceRootPath);
         }
     }
 
@@ -126,8 +124,8 @@ namespace Puma.Common
     {
         public readonly string ExternFilesFolderName;
 
-        public readonly string ProjectGenerationPath = Puma.Utils.GetProjectsPath() + @"\extern\[project.Name]\";
-        public readonly string TargetOutputPath = Puma.Utils.GetOutputPath() + @"\extern\[project.Name]\";
+        public readonly string ProjectGenerationPath = Puma.Utils.GetProjectsPath() + @"\extern\[project.Name]";
+        public readonly string TargetOutputPath = Puma.Utils.GetOutputPath() + @"\extern\[project.Name]";
 
         private ICompiledProject m_compiledProject = new ICompiledProject();
 
@@ -135,7 +133,7 @@ namespace Puma.Common
         {
             Name = _projectName;
             ExternFilesFolderName = _externFolder;
-            SourceRootPath = Puma.Utils.GetExternPath() + @"\[project.ExternFilesFolderName]\";
+            SourceRootPath = Puma.Utils.GetExternPath() + @"\[project.ExternFilesFolderName]";
             AddTargets(Puma.Utils.GetDefaultTarget());
         }
 
@@ -149,8 +147,6 @@ namespace Puma.Common
 
             //Path were the binaries will be generated on compilation
             conf.TargetPath = TargetOutputPath;
-
-            conf.IncludePaths.Add(SourceRootPath);
         }
     }
 
@@ -193,7 +189,7 @@ namespace Puma.Common
         {
             Name = _projectName;
             ExternFilesFolderName = _externFolder;
-            SourceRootPath = Puma.Utils.GetExternPath() + @"\[project.ExternFilesFolderName]\";
+            SourceRootPath = Puma.Utils.GetExternPath() + @"\[project.ExternFilesFolderName]";
             AddTargets(Puma.Utils.GetDefaultTarget());
         }
 

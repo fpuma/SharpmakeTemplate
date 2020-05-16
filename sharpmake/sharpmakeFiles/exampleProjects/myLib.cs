@@ -8,5 +8,11 @@ namespace Example.Projects
         public MyLib()
         : base("MyLib", @"SharpmakeExamplesSource\MyLib")
         {}
+
+        public override void ConfigureAll(Configuration conf, Sharpmake.Target target)
+        {
+            base.ConfigureAll(conf, target);
+            conf.IncludePaths.Add(@"");
+        }
     }
 }

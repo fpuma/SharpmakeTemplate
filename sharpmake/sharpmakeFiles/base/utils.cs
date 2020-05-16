@@ -22,27 +22,27 @@ namespace Puma
 
         static public string GetRepositoryPath()
         {
-            return Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) + @"\..\..\";
+            return Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) + @"\..\..";
         }
 
         static public string GetProjectsPath()
         {
-            return GetRepositoryPath() + @"\_projects\";
+            return GetRepositoryPath() + @"\_projects";
         }
 
         static public string GetOutputPath()
         {
-            return GetRepositoryPath() + @"\_output\";
+            return GetRepositoryPath() + @"\_output";
         }
 
         static public string GetSourcePath()
         {
-            return GetRepositoryPath() + @"\source\";
+            return GetRepositoryPath() + @"\source";
         }
 
         static public string GetExternPath()
         {
-            return GetRepositoryPath() + @"\extern\";
+            return GetRepositoryPath() + @"\extern";
         }
     }
 }
