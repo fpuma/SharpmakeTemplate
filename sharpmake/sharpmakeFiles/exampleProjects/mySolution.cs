@@ -1,5 +1,4 @@
 using System.IO;
-using Sharpmake;
 
 namespace Example.Solutions
 {
@@ -11,7 +10,7 @@ namespace Example.Solutions
         {}
 
         [Sharpmake.Configure]
-        public override void ConfigureAll(Configuration conf, Target target)
+        public override void ConfigureAll(Configuration conf, Sharpmake.Target target)
         {
             base.ConfigureAll(conf, target);
 
@@ -27,7 +26,7 @@ namespace Example.Solutions
         {}
 
         [Sharpmake.Configure]
-        public override void ConfigureAll(Configuration conf, Target target)
+        public override void ConfigureAll(Configuration conf, Sharpmake.Target target)
         {
             base.ConfigureAll(conf, target);
             conf.AddProject<Example.Projects.ExternApplication>(target);

@@ -1,5 +1,4 @@
 using System.IO;
-using Sharpmake;
 
 namespace Example.Projects
 {
@@ -10,12 +9,12 @@ namespace Example.Projects
             :base("ExternBinaries", @"SharpmakeExternExampleSource\ExternBinaries")
         { }
 
-        public override void ConfigureIncludes(Configuration conf, Target target)
+        public override void ConfigureIncludes(Configuration conf, Sharpmake.Target target)
         {
             conf.IncludePaths.Add(@"\include\");
         }
 
-        public override void ConfigureLink(Configuration conf, Target target)
+        public override void ConfigureLink(Configuration conf, Sharpmake.Target target)
         {
             conf.LibraryPaths.Add(SourceRootPath + @"\lib\");
 

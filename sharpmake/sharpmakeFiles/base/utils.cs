@@ -1,23 +1,22 @@
 using System.IO;
 using System.Reflection;
-using Sharpmake;
 
 namespace Puma
 {
     public class Utils
     {
-        static public Target GetDefaultTarget()
+        static public Sharpmake.Target GetDefaultTarget()
         {
-            return new Target(
-                    Platform.win64,
-                    DevEnv.vs2017,
-                    Optimization.Debug | Optimization.Release
+            return new Sharpmake.Target(
+                    Sharpmake.Platform.win64,
+                    Sharpmake.DevEnv.vs2019,
+                    Sharpmake.Optimization.Debug | Sharpmake.Optimization.Release
                     );
         }
 
-        static public string GetOptimizationSuffix(Optimization _optimization)
+        static public string GetOptimizationSuffix(Sharpmake.Optimization _optimization)
         {
-            return Optimization.Debug == _optimization ? "_d" : "_r";
+            return Sharpmake.Optimization.Debug == _optimization ? "_d" : "_r";
         }
 
         static public string GetRepositoryPath()

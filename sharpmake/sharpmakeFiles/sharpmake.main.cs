@@ -1,16 +1,14 @@
 using System.IO;
-using Sharpmake;
-
 
 [module: Sharpmake.Include(@"base\*")]
 
 //Examples
 [module: Sharpmake.Include(@"exampleProjects\*")]
 
-class SharpmakeMainClass
+public static class SharpmakeMainClass
 {
-    [Main]
-    public static void SharpmakeMain(Arguments sharpmakeArgs)
+    [Sharpmake.Main]
+    public static void SharpmakeMain(Sharpmake.Arguments sharpmakeArgs)
     {
         sharpmakeArgs.Generate<Example.Solutions.ExampleSolution>();
         sharpmakeArgs.Generate<Example.Solutions.ExternExampleSolution>();

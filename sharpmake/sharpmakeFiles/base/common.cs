@@ -15,7 +15,7 @@ internal class ICompiledProject
 
         conf.Defines.Add("_CRT_SECURE_NO_WARNINGS");
         conf.Options.Add(Sharpmake.Options.Vc.Compiler.Exceptions.Enable);
-        conf.Options.Add(Sharpmake.Options.Vc.General.WindowsTargetPlatformVersion.v10_0_17134_0);
+        conf.Options.Add(Sharpmake.Options.Vc.General.WindowsTargetPlatformVersion.Latest);
         conf.Options.Add(Sharpmake.Options.Vc.Compiler.CppLanguageStandard.CPP17);
 
         string[] warningsToIgnore = { "4100" };
@@ -106,7 +106,6 @@ namespace Puma.Common
             : base(_projectName, _sourceFolder)
         {}
 
-        [Sharpmake.Configure]
         public override void ConfigureAll(Configuration conf, Sharpmake.Target target)
         {
             base.ConfigureAll(conf, target);
@@ -157,7 +156,6 @@ namespace Puma.Common
             : base(_projectName, _externFolder)
         {}
 
-        [Sharpmake.Configure]
         public override void ConfigureAll(Configuration conf, Sharpmake.Target target)
         {
             base.ConfigureAll(conf, target);
@@ -172,7 +170,6 @@ namespace Puma.Common
             : base(_projectName, _externFolder)
         {}
 
-        [Sharpmake.Configure]
         public override void ConfigureAll(Configuration conf, Sharpmake.Target target)
         {
             base.ConfigureAll(conf, target);
