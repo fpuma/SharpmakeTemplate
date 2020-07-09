@@ -10,7 +10,6 @@ namespace Example.Projects
             : base("MyApplication", @"SharpmakeExamplesSource\MyApplication")
         { }
 
-        [Sharpmake.Configure]
         public override void ConfigureAll(Sharpmake.Project.Configuration conf, Sharpmake.Target target )
         {
             base.ConfigureAll(conf, target);

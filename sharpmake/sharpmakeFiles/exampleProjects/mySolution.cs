@@ -9,7 +9,6 @@ namespace Example.Solutions
             : base("ExampleSolution")
         {}
 
-        [Sharpmake.Configure]
         public override void ConfigureAll(Configuration conf, Sharpmake.Target target)
         {
             base.ConfigureAll(conf, target);
@@ -25,7 +24,6 @@ namespace Example.Solutions
             : base("ExternExampleSolution")
         {}
 
-        [Sharpmake.Configure]
         public override void ConfigureAll(Configuration conf, Sharpmake.Target target)
         {
             base.ConfigureAll(conf, target);

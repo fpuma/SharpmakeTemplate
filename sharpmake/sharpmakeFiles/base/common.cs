@@ -90,7 +90,6 @@ namespace Puma.Common
             : base(_projectName, _sourceFolder)
         {}
 
-        [Sharpmake.Configure]
         public override void ConfigureAll(Configuration conf, Sharpmake.Target target)
         {
             base.ConfigureAll(conf, target);
