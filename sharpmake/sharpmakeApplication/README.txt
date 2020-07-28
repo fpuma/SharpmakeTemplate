@@ -1,1 +1,1 @@
-The binary files correspond to de Sharpmake release version 0.14.0
+The binary files correspond to de Sharpmake release version 0.14.4
