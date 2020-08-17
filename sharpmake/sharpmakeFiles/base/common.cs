@@ -8,7 +8,7 @@ internal class ICompiledProject
         conf.ProjectFileName = "[project.Name]_[target.Platform]_[target.DevEnv]";
 
         //Intermediate path
-        conf.IntermediatePath = @"[conf.ProjectPath]\temp";
+        conf.IntermediatePath = @"[conf.ProjectPath]\temp\[target.Optimization]";
 
         //Name of the binary generated
         conf.TargetFileName = "[project.Name]" + Puma.Utils.GetOptimizationSuffix(target.Optimization);
