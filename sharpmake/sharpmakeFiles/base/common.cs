@@ -11,7 +11,7 @@ internal class ICompiledProject
         conf.IntermediatePath = @"[conf.ProjectPath]\temp\[target.Optimization]";
 
         //Name of the binary generated
-        conf.TargetFileName = "[project.Name]" + Puma.Utils.GetOptimizationSuffix(target.Optimization);
+        conf.TargetFileName = "[project.Name]" + Puma.SharpmakeUtils.GetOptimizationSuffix(target.Optimization);
 
         conf.Defines.Add("_CRT_SECURE_NO_WARNINGS");
         conf.Options.Add(Sharpmake.Options.Vc.Compiler.Exceptions.Enable);
@@ -23,7 +23,7 @@ internal class ICompiledProject
         conf.Options.Add(disableSpecificWarnings);
 
         conf.VcxprojUserFile = new Sharpmake.Project.Configuration.VcxprojUserFileSettings();
-        conf.VcxprojUserFile.LocalDebuggerWorkingDirectory = Puma.Utils.GetOutputPath();
+        conf.VcxprojUserFile.LocalDebuggerWorkingDirectory = Puma.SharpmakeUtils.GetOutputPath();
     }
 }
 
@@ -39,13 +39,13 @@ namespace Puma.Common
         public IMySolution(string _solutionName)
         {
             Name = _solutionName;
-            AddTargets(Puma.Utils.GetDefaultTarget());
+            AddTargets(Puma.SharpmakeUtils.GetDefaultTarget());
         }
 
         [Sharpmake.Configure]
         public virtual void ConfigureAll(Configuration conf, Sharpmake.Target target)
         {
-            conf.SolutionPath = Puma.Utils.GetProjectsPath();
+            conf.SolutionPath = Puma.SharpmakeUtils.GetProjectsPath();
         }
     }
 
@@ -57,8 +57,8 @@ namespace Puma.Common
     {
         public string SourceFilesFolderName;
 
-        public readonly string ProjectGenerationPath = Puma.Utils.GetProjectsPath() + @"\[project.Name]";
-        public readonly string TargetOutputPath    = Puma.Utils.GetOutputPath();
+        public readonly string ProjectGenerationPath = Puma.SharpmakeUtils.GetProjectsPath() + @"\[project.Name]";
+        public readonly string TargetOutputPath    = Puma.SharpmakeUtils.GetOutputPath();
 
         private ICompiledProject m_compiledProject = new ICompiledProject();
 
@@ -66,8 +66,8 @@ namespace Puma.Common
         {
             Name = _projectName;
             SourceFilesFolderName = _sourceFolder;
-            SourceRootPath = Puma.Utils.GetSourcePath() + @"\[project.SourceFilesFolderName]";
-            AddTargets(Puma.Utils.GetDefaultTarget());
+            SourceRootPath = Puma.SharpmakeUtils.GetSourcePath() + @"\[project.SourceFilesFolderName]";
+            AddTargets(Puma.SharpmakeUtils.GetDefaultTarget());
         }
 
         [Sharpmake.Configure]
@@ -122,8 +122,8 @@ namespace Puma.Common
     {
         public readonly string ExternFilesFolderName;
 
-        public readonly string ProjectGenerationPath = Puma.Utils.GetProjectsPath() + @"\extern\[project.Name]";
-        public readonly string TargetOutputPath = Puma.Utils.GetOutputPath() + @"\extern\[project.Name]";
+        public readonly string ProjectGenerationPath = Puma.SharpmakeUtils.GetProjectsPath() + @"\extern\[project.Name]";
+        public readonly string TargetOutputPath = Puma.SharpmakeUtils.GetOutputPath() + @"\extern\[project.Name]";
 
         private ICompiledProject m_compiledProject = new ICompiledProject();
 
@@ -131,8 +131,8 @@ namespace Puma.Common
         {
             Name = _projectName;
             ExternFilesFolderName = _externFolder;
-            SourceRootPath = Puma.Utils.GetExternPath() + @"\[project.ExternFilesFolderName]";
-            AddTargets(Puma.Utils.GetDefaultTarget());
+            SourceRootPath = Puma.SharpmakeUtils.GetExternPath() + @"\[project.ExternFilesFolderName]";
+            AddTargets(Puma.SharpmakeUtils.GetDefaultTarget());
         }
 
         [Sharpmake.Configure]
@@ -185,8 +185,8 @@ namespace Puma.Common
         {
             Name = _projectName;
             ExternFilesFolderName = _externFolder;
-            SourceRootPath = Puma.Utils.GetExternPath() + @"\[project.ExternFilesFolderName]";
-            AddTargets(Puma.Utils.GetDefaultTarget());
+            SourceRootPath = Puma.SharpmakeUtils.GetExternPath() + @"\[project.ExternFilesFolderName]";
+            AddTargets(Puma.SharpmakeUtils.GetDefaultTarget());
         }
 
         public abstract void ConfigureIncludes(Configuration conf, Sharpmake.Target target);

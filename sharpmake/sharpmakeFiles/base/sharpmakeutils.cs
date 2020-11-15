@@ -3,7 +3,7 @@ using System.Reflection;
 
 namespace Puma
 {
-    public class Utils
+    public class SharpmakeUtils
     {
         static public Sharpmake.Target GetDefaultTarget()
         {
