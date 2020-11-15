@@ -5,12 +5,12 @@ _projects/*
 ###################################################
 #SHARPMAKE BEGIN
 #Ignore files related to the debug solution of sharpmake
-sharpmake/sharpmakeFiles/*.csproj
-sharpmake/sharpmakeFiles/*.user
-sharpmake/sharpmakeFiles/*.sln
-sharpmake/sharpmakeFiles/obj/*
-sharpmake/sharpmakeFiles/output/*
-sharpmake/sharpmakeFiles/.vs/*
+sharpmake/sharpmakeFiles/**/*.csproj
+sharpmake/sharpmakeFiles/**/*.user
+sharpmake/sharpmakeFiles/**/*.sln
+sharpmake/sharpmakeFiles/**/obj/*
+sharpmake/sharpmakeFiles/**/output/*
+sharpmake/sharpmakeFiles/**/.vs/*
 
 #Make exception for the files in sharpmakeApplication
 !sharpmakeApplication/*
