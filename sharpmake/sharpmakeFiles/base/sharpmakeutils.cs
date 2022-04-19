@@ -9,7 +9,7 @@ namespace Puma
         {
             return new Sharpmake.Target(
                     Sharpmake.Platform.win64,
-                    Sharpmake.DevEnv.vs2019,
+                    Sharpmake.DevEnv.vs2022,
                     Sharpmake.Optimization.Debug | Sharpmake.Optimization.Release
                     );
         }

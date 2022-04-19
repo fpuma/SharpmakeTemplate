@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sharpmake.CommonPlatforms</name>
+    </assembly>
+    <members>
+        <member name="P:Sharpmake.Android.GlobalSettings.AndroidHome">
+            <summary>
+            Android SDK path
+            </summary>
+        </member>
+        <member name="P:Sharpmake.Android.GlobalSettings.NdkRoot">
+            <summary>
+            Android NDK path
+            </summary>
+        </member>
+        <member name="P:Sharpmake.Android.GlobalSettings.JavaHome">
+            <summary>
+            Java SE Development Kit path
+            </summary>
+        </member>
+        <member name="P:Sharpmake.Android.GlobalSettings.AntHome">
+            <summary>
+            Apache Ant path
+            </summary>
+        </member>
+        <member name="P:Sharpmake.Linux.GlobalSettings.SystemPathProvider">
+            <summary>
+            Allows setting a custom provider for system paths
+            </summary>
+        </member>
+        <member name="T:Sharpmake.Linux.Options.General.VcPlatformToolset">
+            <summary>
+            VC Platform Toolset
+            </summary>
+            <remarks>
+            Specifies which build tools will be used for the project in Visual Studio
+            </remarks>
+        </member>
+        <member name="F:Sharpmake.Linux.Options.General.VcPlatformToolset.Remote_GCC_1_0">
+            <summary>
+            GCC for Remote Linux
+            </summary>
+        </member>
+        <member name="F:Sharpmake.Linux.Options.General.VcPlatformToolset.Remote_Clang_1_0">
+            <summary>
+            Clang for Remote Linux
+            </summary>
+        </member>
+        <member name="F:Sharpmake.Linux.Options.General.VcPlatformToolset.WSL_1_0">
+            <summary>
+            GCC for Windows Subsystem for Linux
+            </summary>
+        </member>
+        <member name="F:Sharpmake.Linux.Options.General.VcPlatformToolset.WSL_Clang_1_0">
+            <summary>
+            Clang for Windows Subsystem for Linux
+            </summary>
+        </member>
+        <member name="F:Sharpmake.Linux.Options.General.VcPlatformToolset.WSL2_1_0">
+            <summary>
+            WSL2 Toolset
+            </summary>
+        </member>
+        <member name="T:Sharpmake.Linux.Options.Compiler.PositionIndependentCode">
+            <summary>
+            Generates position-independent code, suitable for shared libraries.
+            </summary>
+            <remarks>
+            The corresponding clang flags is <c>-fPIC</c>.
+            </remarks>
+        </member>
+    </members>
+</doc>

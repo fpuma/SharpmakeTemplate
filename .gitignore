@@ -11,6 +11,7 @@ sharpmake/sharpmakeFiles/**/*.sln
 sharpmake/sharpmakeFiles/**/obj/*
 sharpmake/sharpmakeFiles/**/output/*
 sharpmake/sharpmakeFiles/**/.vs/*
+sharpmake/sharpmakeFiles/**/Properties/*
 
 #Make exception for the files in sharpmakeApplication
 !sharpmakeApplication/*
