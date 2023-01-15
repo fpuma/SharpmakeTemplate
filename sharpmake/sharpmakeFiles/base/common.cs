@@ -53,7 +53,7 @@ namespace Puma.Common
     //My projects
     //******************************************************************************************
     [Sharpmake.Generate]
-    public abstract class IMyApplication: Sharpmake.Project
+    public abstract class IApplication: Sharpmake.Project
     {
         public string SourceFilesFolderName;
 
@@ -62,7 +62,7 @@ namespace Puma.Common
 
         private ICompiledProject m_compiledProject = new ICompiledProject();
 
-        public IMyApplication(string _projectName, string _sourceFolder)
+        public IApplication(string _projectName, string _sourceFolder)
         {
             Name = _projectName;
             SourceFilesFolderName = _sourceFolder;
@@ -84,9 +84,9 @@ namespace Puma.Common
     }
 
     [Sharpmake.Generate]
-    public abstract  class IMyLib : IMyApplication
+    public abstract  class IStaticLibrary : IApplication
     {
-        public IMyLib(string _projectName, string _sourceFolder) 
+        public IStaticLibrary(string _projectName, string _sourceFolder) 
             : base(_projectName, _sourceFolder)
         {}
 
@@ -99,9 +99,9 @@ namespace Puma.Common
     }
 
     [Sharpmake.Generate]
-    public abstract class IMyDll : IMyApplication
+    public abstract class IDynamicLibrary : IApplication
     {
-        public IMyDll(string _projectName, string _sourceFolder)
+        public IDynamicLibrary(string _projectName, string _sourceFolder)
             : base(_projectName, _sourceFolder)
         {}
 
@@ -113,79 +113,17 @@ namespace Puma.Common
         }
     }
 
-    //******************************************************************************************
-    //Extern projects
-    //******************************************************************************************
-
-    [Sharpmake.Generate]
-    public abstract class IExternApplication : Sharpmake.Project
-    {
-        public readonly string ExternFilesFolderName;
-
-        public readonly string ProjectGenerationPath = Puma.SharpmakeUtils.GetProjectsPath() + @"\extern\[project.Name]";
-        public readonly string TargetOutputPath = Puma.SharpmakeUtils.GetOutputPath() + @"\extern\[project.Name]";
-
-        private ICompiledProject m_compiledProject = new ICompiledProject();
-
-        public IExternApplication(string _projectName, string _externFolder)
-        {
-            Name = _projectName;
-            ExternFilesFolderName = _externFolder;
-            SourceRootPath = Puma.SharpmakeUtils.GetExternPath() + @"\[project.ExternFilesFolderName]";
-            AddTargets(Puma.SharpmakeUtils.GetDefaultTarget());
-        }
-
-        [Sharpmake.Configure]
-        public virtual void ConfigureAll(Configuration conf, Sharpmake.Target target)
-        {
-            m_compiledProject.ConfigureAll(conf, target);
-
-            //Path were the project will be generated
-            conf.ProjectPath = ProjectGenerationPath;
-
-            //Path were the binaries will be generated on compilation
-            conf.TargetPath = TargetOutputPath;
-        }
-    }
-
-    [Sharpmake.Generate]
-    public abstract class IExternLib : IExternApplication
-    {
-        public IExternLib(string _projectName, string _externFolder)
-            : base(_projectName, _externFolder)
-        {}
-
-        public override void ConfigureAll(Configuration conf, Sharpmake.Target target)
-        {
-            base.ConfigureAll(conf, target);
-            conf.Output = Configuration.OutputType.Lib;
-        }
-    }
-
-    [Sharpmake.Generate]
-    public abstract class IExternDll : IExternApplication
-    {
-        public IExternDll(string _projectName, string _externFolder)
-            : base(_projectName, _externFolder)
-        {}
-
-        public override void ConfigureAll(Configuration conf, Sharpmake.Target target)
-        {
-            base.ConfigureAll(conf, target);
-            conf.Output = Configuration.OutputType.Dll;
-        }
-    }
 
     [Sharpmake.Export]
-    abstract public class IExternBinaries : Sharpmake.Project
+    abstract public class IBinaries : Sharpmake.Project
     {
-        public readonly string ExternFilesFolderName;
+        public readonly string SourceFilesFolderName;
 
-        public IExternBinaries(string _projectName, string _externFolder)
+        public IBinaries(string _projectName, string _sourceFolder)
         {
             Name = _projectName;
-            ExternFilesFolderName = _externFolder;
-            SourceRootPath = Puma.SharpmakeUtils.GetExternPath() + @"\[project.ExternFilesFolderName]";
+            SourceFilesFolderName = _sourceFolder;
+            SourceRootPath = Puma.SharpmakeUtils.GetSourcePath() + @"\[project.SourceFilesFolderName]";
             AddTargets(Puma.SharpmakeUtils.GetDefaultTarget());
         }
 

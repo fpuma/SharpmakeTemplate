@@ -6,6 +6,8 @@
 #include "externLib.h"
 #include "externDll.h"
 
+#include "headerOnly.h"
+
 #include "precompiledDll.h"
 
 using namespace Examples;
@@ -39,6 +41,9 @@ int main(int argc, char *argv[])
     preCompBinariesObj.someMethod();
     Extern::PrecompiledBinaries::ExternClass preCompBinariesNonExportedObj;
     preCompBinariesNonExportedObj.exportedMethod();
+
+    //Header only
+    HOL::someMethod();
 
     system( "pause" );
 

@@ -3,7 +3,7 @@ using System.IO;
 namespace Example.Projects
 {
     [Sharpmake.Generate]
-    public class MyDll : Puma.Common.IMyDll
+    public class MyDll : Puma.Common.IDynamicLibrary
     {
         public MyDll()
         : base("MyDll", @"SharpmakeExamplesSource\MyDll")

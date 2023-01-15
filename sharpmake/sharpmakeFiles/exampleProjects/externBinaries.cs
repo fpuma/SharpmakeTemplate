@@ -3,10 +3,10 @@ using System.IO;
 namespace Example.Projects
 {
     [Sharpmake.Export]
-    class ExternBinaries : Puma.Common.IExternBinaries
+    class ExternBinaries : Puma.Common.IBinaries
     {
         public ExternBinaries()
-            :base("ExternBinaries", @"SharpmakeExternExampleSource\ExternBinaries")
+            :base("ExternBinaries", @"extern\SharpmakeExternExampleSource\ExternBinaries")
         { }
 
         public override void ConfigureIncludes(Configuration conf, Sharpmake.Target target)

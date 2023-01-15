@@ -38,10 +38,5 @@ namespace Puma
         {
             return GetRepositoryPath() + @"\source";
         }
-
-        static public string GetExternPath()
-        {
-            return GetRepositoryPath() + @"\extern";
-        }
     }
 }

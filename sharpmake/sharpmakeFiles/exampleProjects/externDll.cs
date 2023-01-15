@@ -3,10 +3,10 @@ using System.IO;
 namespace Example.Projects
 {
     [Sharpmake.Generate]
-    public class ExternDll : Puma.Common.IExternDll
+    public class ExternDll : Puma.Common.IDynamicLibrary
     {
         public ExternDll()
-            : base("ExternDll", @"SharpmakeExternExampleSource\ExternDll")
+            : base("ExternDll", @"extern\SharpmakeExternExampleSource\ExternDll")
         { }
 
         public override void ConfigureAll(Configuration conf, Sharpmake.Target target)
