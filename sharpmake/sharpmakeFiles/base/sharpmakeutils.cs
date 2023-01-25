@@ -21,7 +21,7 @@ namespace Puma
 
         static public string GetRepositoryPath()
         {
-            return Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) + @"\..\..";
+            return Path.GetDirectoryName(Assembly.GetEntryAssembly().Location) + @"\..\..\..";
         }
 
         static public string GetProjectsPath()

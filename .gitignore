@@ -8,13 +8,13 @@ _projects/*
 sharpmake/sharpmakeFiles/**/*.csproj
 sharpmake/sharpmakeFiles/**/*.user
 sharpmake/sharpmakeFiles/**/*.sln
+sharpmake/sharpmakeFiles/**/*.bin
 sharpmake/sharpmakeFiles/**/obj/*
 sharpmake/sharpmakeFiles/**/output/*
 sharpmake/sharpmakeFiles/**/.vs/*
 sharpmake/sharpmakeFiles/**/Properties/*
+sharpmake/sharpmakeApplication/bin/*
 
-#Make exception for the files in sharpmakeApplication
-!sharpmakeApplication/*
 #SHARPMAKE END
 ##################################################
 
