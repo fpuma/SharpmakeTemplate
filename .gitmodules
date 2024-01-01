@@ -1,0 +1,3 @@
+[submodule "sharpmake/application"]
+	path = sharpmake/application
+	url = https://github.com/fpuma/SharpmakeUtils.git
