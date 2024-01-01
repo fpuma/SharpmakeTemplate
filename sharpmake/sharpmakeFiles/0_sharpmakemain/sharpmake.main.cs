@@ -1,6 +1,6 @@
 using System.IO;
 
-[module: Sharpmake.Include(@"..\base\*")]
+[module: Sharpmake.Include(@"..\sharpmakeutils\src\*")]
 
 //Examples
 [module: Sharpmake.Include(@"..\exampleProjects\*")]
