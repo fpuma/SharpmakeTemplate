@@ -3,7 +3,7 @@ using System.IO;
 [module: Sharpmake.Include(@"..\..\sharpmakeutils\utils\*")]
 
 //Examples
-[module: Sharpmake.Include(@"..\exampleProjects\*")]
+[module: Sharpmake.Include(@"..\examples\*")]
 
 public static class SharpmakeMainClass
 {
