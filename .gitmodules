@@ -1,6 +1,0 @@
-[submodule "sharpmake/sharpmakeApplication/submodule"]
-	path = sharpmake/sharpmakeApplication/submodule
-	url = https://github.com/ubisoft/Sharpmake.git
-[submodule "sharpmake/sharpmakeFiles/sharpmakeutils"]
-	path = sharpmake/sharpmakeFiles/sharpmakeutils
-	url = https://github.com/fpuma/SharpmakeUtils.git
