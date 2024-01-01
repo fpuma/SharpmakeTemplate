@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "sharpmake_debug": {
+      "commandName": "Executable",
+      "commandLineArgs": "/sources(@\u0027C:\\Users\\fpuma\\Documents\\0_MyDocs\\1_Dev\\0_MyRepos\\sharpmaketemplate\\sharpmake\\sharpmakefiles\\main\\sharpmake.main.cs\u0027) ",
+      "executablePath": "C:\\Users\\fpuma\\Documents\\0_MyDocs\\1_Dev\\0_MyRepos\\sharpmaketemplate\\sharpmake\\sharpmakeutils\\bin\\Sharpmake.Application.exe",
+      "workingDirectory": "C:\\Users\\fpuma\\Documents\\0_MyDocs\\1_Dev\\0_MyRepos\\sharpmaketemplate\\sharpmake\\sharpmakefiles\\main"
+    }
+  }
+}
