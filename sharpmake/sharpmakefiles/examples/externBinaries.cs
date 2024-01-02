@@ -1,12 +1,15 @@
 using System.IO;
 
-namespace Example.Projects
+namespace Example.Projects.Export
 {
     [Sharpmake.Export]
-    class ExternBinaries : Puma.Common.IBinaries
+    class ExternBinaries : Puma.SharpmakeBase.IBinaries
     {
+        static private readonly string sSourceFilesFolderName = @"extern\SharpmakeExternExampleSource\ExternBinaries";
+        static public readonly string sSourceFolderPath = Puma.SharpmakeUtils.GetSourcePath() + @"\" + sSourceFilesFolderName;
+
         public ExternBinaries()
-            :base("ExternBinaries", @"extern\SharpmakeExternExampleSource\ExternBinaries")
+            :base("ExternBinaries", sSourceFilesFolderName)
         { }
 
         public override void ConfigureIncludes(Configuration conf, Sharpmake.Target target)

@@ -3,7 +3,7 @@ using System.IO;
 namespace Example.Solutions
 {
     [Sharpmake.Generate]
-    public class ExampleSolution : Puma.Common.IMySolution
+    public class ExampleSolution : Puma.SharpmakeBase.ISolution
     {
         public ExampleSolution()
             : base("ExampleSolution")
@@ -18,7 +18,7 @@ namespace Example.Solutions
     }
 
     [Sharpmake.Generate]
-    public class ExternExampleSolution : Puma.Common.IMySolution
+    public class ExternExampleSolution : Puma.SharpmakeBase.ISolution
     {
         public ExternExampleSolution()
             : base("ExternExampleSolution")
@@ -27,7 +27,6 @@ namespace Example.Solutions
         public override void ConfigureAll(Configuration conf, Sharpmake.Target target)
         {
             base.ConfigureAll(conf, target);
-            conf.AddProject<Example.Projects.ExternApplication>(target);
             conf.AddProject<Example.Projects.ExternLib>(target);
             conf.AddProject<Example.Projects.ExternDll>(target);
         }
