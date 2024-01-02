@@ -1,17 +1,22 @@
 using System.IO;
 
-namespace Example.Projects
+namespace Example.Projects.Export
 {
     [Sharpmake.Export]
-    class ExternHeader
+    class ExternHeader : Puma.SharpmakeBase.IHeaderOnly
     {
-        private static readonly string RelativeSourcePath = @"extern\SharpmakeExternExampleSource\ExternHeaderOnly";
-        public static readonly string SourcePath = Puma.SharpmakeUtils.GetSourcePath() + @"\" + RelativeSourcePath;
+        static private readonly string sSourceFilesFolderName = @"extern\SharpmakeExternExampleSource\ExternHeaderOnly";
+        static public readonly string sSourceFolderPath = Puma.SharpmakeUtils.GetSourcePath() + @"\" + sSourceFilesFolderName;
 
-
-        public static void ConfigureIncludes(Sharpmake.Project.Configuration conf, Sharpmake.Target target)
+        public ExternHeader()
+            : base ("ExternHeader", sSourceFilesFolderName)
         {
-            conf.IncludePaths.Add(SourcePath + @"\include\");
+
+        }
+
+        public override void ConfigureIncludes(Sharpmake.Project.Configuration conf, Sharpmake.Target target)
+        {
+            conf.IncludePaths.Add(@"\include\");
         }
 
     }

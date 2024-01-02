@@ -3,7 +3,7 @@ using System.IO;
 namespace Example.Projects
 {
     [Sharpmake.Generate]
-    public class ExternLib : Puma.Common.IStaticLibrary
+    public class ExternLib : Puma.SharpmakeBase.IStaticLibrary
     {
         public ExternLib()
             : base("ExternLib", @"extern\SharpmakeExternExampleSource\ExternLib")
