@@ -16,6 +16,3 @@ sharpmake/sharpmakefiles/**/Properties/*
 
 #SHARPMAKE END
 ##################################################
-
-#EXCEPTIONS
-!extern/**
