@@ -1,12 +1,11 @@
 using System.IO;
 
-namespace Example.Projects.Export
+namespace Example.Projects
 {
-    [Sharpmake.Export]
+    [Sharpmake.Generate]
     class ExternHeader : Puma.SharpmakeBase.IHeaderOnly
     {
         static private readonly string sSourceFilesFolderName = @"extern\SharpmakeExternExampleSource\ExternHeaderOnly";
-        static public readonly string sSourceFolderPath = Puma.SharpmakeUtils.GetSourcePath() + @"\" + sSourceFilesFolderName;
 
         public ExternHeader()
             : base ("ExternHeader", sSourceFilesFolderName)

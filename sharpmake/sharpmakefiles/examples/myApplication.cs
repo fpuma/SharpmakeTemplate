@@ -9,8 +9,6 @@ namespace Example.Projects
         public MyApplication()
             : base("MyApplication", @"SharpmakeExamplesSource\MyApplication")
         { 
-            AdditionalSourceRootPaths.Add(Export.ExternHeader.sSourceFolderPath);
-            AdditionalSourceRootPaths.Add(Export.ExternBinaries.sSourceFolderPath);
         }
 
         public override void ConfigureAll(Sharpmake.Project.Configuration conf, Sharpmake.Target target )
@@ -20,8 +18,8 @@ namespace Example.Projects
             conf.AddPrivateDependency<MyDll>(target);
             conf.AddPrivateDependency<Export.ExternLib>(target);
             conf.AddPrivateDependency<Export.ExternDll>(target);
-            conf.AddPrivateDependency<Export.ExternBinaries>(target);
-            conf.AddPrivateDependency<Export.ExternHeader>(target);
+            conf.AddPrivateDependency<ExternBinaries>(target);
+            conf.AddPrivateDependency<ExternHeader>(target);
         }
     }
 }
